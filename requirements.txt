@@ -2,3 +2,6 @@ django==3.2
 Pillow
 mysqlclient
 django-admin-tailwind
+django-crispy-forms
+crispy-bootstrap4
+django-paypal
