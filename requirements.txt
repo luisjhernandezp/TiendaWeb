@@ -5,3 +5,4 @@ django-admin-tailwind
 django-crispy-forms
 crispy-bootstrap4
 django-paypal
+python-decouple

@@ -23,9 +23,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-jcftzukmni-x=2j%le(7x)m4%lm+cld=wue^xh-gey%$d-&737'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'web',
     'crispy_forms',
     'crispy_bootstrap4',
+    'paypal.standard.ipn',
     
     
 ]
@@ -131,6 +132,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
 
 STATIC_URL = '/static/'
+STATIC_ROOT = os.path.join(BASE_DIR,'static')
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
@@ -139,3 +141,10 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media') # para unir las dos rutas(BASE_DIR con la carpeta 'media')
 MEDIA_URL = '/media/'
+
+PAYPAL_TEST = True
+
+EMAIL_HOST = 'sandbox.smtp.mailtrap.io'
+EMAIL_HOST_USER = 'f040a328bf1b5a'
+EMAIL_HOST_PASSWORD = 'f1521d1aa545c2'
+EMAIL_PORT = '2525'
